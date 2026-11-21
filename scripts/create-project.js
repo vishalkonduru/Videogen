@@ -1,0 +1,21 @@
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import { parseArgs, safeName, rootDir } from "./utils.js";
+
+const args = parseArgs(process.argv.slice(2));
+const name = safeName(args.name);
+const template = args.template || "explainer";
+if (template !== "explainer") throw new Error(`Unknown template "${template}". Available: explainer`);
+const root = rootDir();
+const target = path.join(root, "projects", name);
+if (fs.existsSync(target)) throw new Error(`Project already exists: ${target}`);
+fs.mkdirSync(target, { recursive: true });
+const source = path.join(root, "templates", template);
+fs.cpSync(source, target, { recursive: true });
+const manifest = JSON.parse(fs.readFileSync(path.join(target, "videogen.json"), "utf8"));
+manifest.name = name;
+manifest.createdAt = new Date().toISOString();
+fs.writeFileSync(path.join(target, "videogen.json"), JSON.stringify(manifest, null, 2) + "\\n");
+console.log(`Created projects/${name}`);
+console.log("Next: cd projects/" + name + " && npm install && npm run studio");
