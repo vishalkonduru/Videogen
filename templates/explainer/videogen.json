@@ -1,0 +1,31 @@
+{
+  "name": "my-explainer",
+  "template": "explainer",
+  "status": "draft",
+  "format": "landscape",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "durationInSeconds": 18,
+  "brand": "default",
+  "scenes": [
+    {
+      "title": "The big question",
+      "narration": "Every useful idea starts with a question.",
+      "visual": "A bold question appears against a clean dark background.",
+      "durationInSeconds": 5
+    },
+    {
+      "title": "The explanation",
+      "narration": "Break the idea into clear steps, and make each step easy to see.",
+      "visual": "Three simple cards appear one by one.",
+      "durationInSeconds": 8
+    },
+    {
+      "title": "The takeaway",
+      "narration": "End with one memorable point the viewer can use.",
+      "visual": "A concise takeaway fills the screen.",
+      "durationInSeconds": 5
+    }
+  ]
+}
