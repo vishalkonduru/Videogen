@@ -1,0 +1,15 @@
+{
+  "name": "videogen-toolkit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local-first AI-assisted video production toolkit",
+  "type": "module",
+  "scripts": {
+    "doctor": "node scripts/doctor.js",
+    "create": "node scripts/create-project.js",
+    "list": "node scripts/list-projects.js",
+    "validate": "node scripts/validate-project.js",
+    "script": "node scripts/show-workflow.js"
+  },
+  "engines": { "node": ">=20" }
+}
