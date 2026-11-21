@@ -1,0 +1,15 @@
+{
+  "name": "Videogen Default",
+  "colors": {
+    "background": "#101827",
+    "surface": "#1e293b",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#38bdf8"
+  },
+  "fonts": {
+    "display": "Arial",
+    "body": "Arial"
+  },
+  "logo": null
+}
